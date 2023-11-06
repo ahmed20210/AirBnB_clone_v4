@@ -16,6 +16,7 @@ $(document).ready(function () {
       $('div.amenities > h4').html('&nbsp;');
     }
   });
+
   $(document).on('change', ".locations > .popover > li > input[type='checkbox']", function () {
     if (this.checked) {
       checkedStates[$(this).data('id')] = $(this).data('name');
@@ -31,6 +32,7 @@ $(document).ready(function () {
       $('div.locations > h4').html('&nbsp;');
     }
   });
+
   $(document).on('change', ".locations > .popover > li > ul > li > input[type='checkbox']", function () {
     if (this.checked) {
       checkedCities[$(this).data('id')] = $(this).data('name');
@@ -46,6 +48,7 @@ $(document).ready(function () {
       $('div.locations > h4').html('&nbsp;');
     }
   });
+
   $.get('http://0.0.0.0:5001/api/v1/status/', function (data, textStatus) {
     if (textStatus === 'success') {
       if (data.status === 'OK') {
@@ -55,6 +58,7 @@ $(document).ready(function () {
       }
     }
   });
+
   $.ajax({
     type: 'POST',
     url: 'http://0.0.0.0:5001/api/v1/places_search',
@@ -68,6 +72,7 @@ $(document).ready(function () {
       }
     }
   });
+  
   $('.filters > button').click(function () {
     $('.places > article').remove();
     $.ajax({

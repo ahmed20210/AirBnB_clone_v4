@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="../static/styles/8-places.css?{{ cache_id }}">
     <link rel="icon" href="../static/images/icon.png?{{ cache_id }}" type="image/png">
 
-    <!-- Import jQuery -->
+    <!-- For Import jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-    <!-- Import custom Javascript -->
+    <!-- For Import custom Javascript -->
     <script type="text/javascript" src="../static/scripts/4-hbnb.js?{{ cache_id }}"></script>
 
-    <title>AirBnb Clone</title>
+    <title>
+      AirBnb Clone
+    </title>
   </head>
   <body>
     <header>
@@ -41,8 +43,12 @@
 	  </ul>
 	</div>
 	<div class="amenities">
-          <h3>Amenities</h3>
-          <h4>&nbsp;</h4>
+          <h3>
+            Amenities
+          </h3>
+          <h4>
+            &nbsp;
+          </h4>
           <ul class="popover">
 	    {% for amty in amenities.values() %}
 	    <li>
@@ -56,12 +62,14 @@
 	</button>
       </section>
       <section class="places">
-	<h1>Places</h1>
+	<h1>
+    Places
+  </h1>
       </section>
     </div>
     <footer>
       <p>
-	Holberton School
+        Holberton School
       </p>
     </footer>
   </body>

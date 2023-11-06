@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Flask app to generate complete html page containing location/amenity
-dropdown menus and rental listings"""
+"""Flask app to generate complete html page"""
 from flask import Flask, render_template
 from models import storage
 import uuid
@@ -10,7 +9,7 @@ app.url_map.strict_slashes = False
 
 @app.route('/4-hbnb')
 def display_hbnb():
-    """Generate page with popdown menu of states/cities"""
+    """Generate page"""
     states = storage.all('State')
     amenities = storage.all('Amenity')
     places = storage.all('Place')
@@ -24,7 +23,7 @@ def display_hbnb():
 
 @app.teardown_appcontext
 def teardown_db(*args, **kwargs):
-    """Close database or file storage"""
+    """Close database storage"""
     storage.close()
 
 
